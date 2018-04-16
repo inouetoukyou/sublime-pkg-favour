@@ -1,0 +1,19 @@
+{
+    "scope": "source.c++",
+    "completions":
+    [
+        "c++",
+
+        { "trigger": "const", "contents": "const" },
+        { "trigger": "exit", "contents": "exit($1);" },
+        { "trigger": "return", "contents": "return ${1:0};" },
+        { "trigger": "double", "contents": "double" },
+        { "trigger": "int", "contents": "int" },
+        { "trigger": "float", "contents": "float" },
+        { "trigger": "struct", "contents": "struct" },
+        { "trigger": "class", "contents": "class" },
+        { "trigger": "map", "contents": "map" },
+        { "trigger": "vector", "contents": "vector" },
+        { "trigger": "pair", "contents": "pair" },
+    ]
+}
