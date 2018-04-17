@@ -267,15 +267,14 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'cite', 'colgroup', 'code', 'content', 'data', 'datalist',
             'dir', 'div', 'dd', 'del', 'details', 'dfn', 'dl', 'dt', 'element',
             'em', 'embed', 'fieldset', 'figure', 'figcaption', 'font', 'footer',
-            'form', 'frame', 'frameset', 'head', 'header', 'h1', 'h2', 'h3',
-            'h4', 'h5', 'h6', 'i', 'ins', 'isindex', 'kbd', 'keygen',
-            'li', 'label', 'legend', 'main', 'map', 'mark', 'meter',
+            'form', 'frame', 'frameset', 'head', 'header','i', 'ins', 'isindex', 'kbd', 'keygen',
+            'label', 'legend', 'main', 'map', 'mark', 'meter',
             'nav', 'noframes', 'noscript', 'object', 'ol', 'optgroup',
             'option', 'output', 'p', 'picture', 'pre', 'q', 'rp',
             'rt', 'rtc', 'ruby', 's', 'samp', 'section', 'select', 'shadow',
             'small', 'span', 'strong', 'sub', 'summary', 'sup',
             'table', 'tbody', 'td', 'template', 'tfoot', 'th',
-            'thead', 'time', 'title', 'tr', 'tt', 'u', 'ul', 'var',
+            'thead', 'time', 'title', 'tr', 'tt', 'u', 'var',
             'video'
         ])
 
@@ -292,7 +291,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             ('col\tTag', 'col>'),
             ('hr\tTag', 'hr>'),
             ('iframe\tTag', 'iframe src=\"$1\">$0</iframe>'),
-            ('input\tTag', 'input type=\"${1:text}\"$2 />$3<br/>\n'),
+            ('input\tTag', 'input type=\"${1:text}\"$2 />$3<br/>'),
             ('img\tTag', 'img src=\"$1\">'),
             ('link\tTag', 'link rel=\"stylesheet\" type=\"text/css\" href=\"$1\">'),
             ('meta\tTag', 'meta ${1:charset=\"utf-8\"} />'),
@@ -308,7 +307,15 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             # custom
             ('circle\tTag', 'circle r=\"${1:80}\" cx=\"${2:100}\" cy=\"${3:100}\" fill=\"${4:blue}\"/>'),
             ('svg\tTag', 'svg> $1 </svg>'),
-            ('textarea\tTag', 'textarea rows=\"${1:10}\" cols=\"${2:60}\" spellcheck=\"${3:true}\">\n\t$4\n</textarea>\n')
+            ('textarea\tTag', 'textarea rows=\"${1:10}\" cols=\"${2:60}\" spellcheck=\"${3:true}\">\n\t$4\n</textarea>'),
+            ('ul\tTag', 'ul>\n\t$1\n</ul>'),
+            ('li\tTag', 'li>$1</li>'),
+            ('h1\tTag', 'h1>$1</h1>'),
+            ('h2\tTag', 'h2>$1</h2>'),
+            ('h3\tTag', 'h3>$1</h3>'),
+            ('h4\tTag', 'h4>$1</h4>'),
+            ('h5\tTag', 'h5>$1</h5>'),
+            ('h6\tTag', 'h6>$1</h6>'),
         ])
 
         return default_list
