@@ -274,7 +274,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'option', 'output', 'p', 'picture', 'pre', 'q', 'rp',
             'rt', 'rtc', 'ruby', 's', 'samp', 'section', 'select', 'shadow',
             'small', 'span', 'strong', 'sub', 'summary', 'sup',
-            'table', 'tbody', 'td', 'template', 'textarea', 'tfoot', 'th',
+            'table', 'tbody', 'td', 'template', 'tfoot', 'th',
             'thead', 'time', 'title', 'tr', 'tt', 'u', 'ul', 'var',
             'video'
         ])
@@ -307,7 +307,8 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
 
             # custom
             ('circle\tTag', 'circle r=\"${1:80}\" cx=\"${2:100}\" cy=\"${3:100}\" fill=\"${4:blue}\"/>'),
-            ('svg\tTag', 'svg> $1 </svg>')
+            ('svg\tTag', 'svg> $1 </svg>'),
+            ('textarea\tTag', 'textarea rows=\"${1:10}\" cols=\"${2:60}\" spellcheck=\"${3:true}\">\n\t$4\n</textarea>\n')
         ])
 
         return default_list
