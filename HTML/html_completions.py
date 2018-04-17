@@ -12,7 +12,7 @@ def match(rex, str):
 def make_completion(tag):
     # make it look like
     # ("table\tTag", "table>$1</table>"),
-    return (tag + '\tTag', tag + '>$0</' + tag + '>')
+    return (tag + '\tTag', tag + '$1>$2</' + tag + '>$0')
 
 def get_tag_to_attributes():
     """
@@ -275,7 +275,9 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'small', 'strong', 'sub', 'summary', 'sup',
             'table', 'tbody', 'td', 'template', 'tfoot', 'th',
             'thead', 'time', 'tr', 'tt', 'u', 'var',
-            'video'
+            'video',
+            # custom
+            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'title', 'li', 'svg',
         ])
 
         for tag in normal_tags:
@@ -299,25 +301,15 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             ('progress\tTag', 'progress value=\"$1\" max=\"$2\">'),
             ('script\tTag', 'script${2: type=\"${1:text/javascript}\"}>$0</script>'),
             ('source\tTag', 'source src=\"$1\" type=\"$2\">'),
-            ('style\tTag', 'style type=\"${1:text/css}\">$0</style>'),
+            ('style\tTag', 'style type=\"${1:text/css}\">$2</style>'),
             ('track\tTag', 'track kind=\"$1\" src=\"$2\">'),
             ('wbr\tTag', 'wbr>'),
             ('video\tTag', 'video src=\"$1\">$0</video>'),
 
             # custom
             ('circle\tTag', 'circle r=\"${1:80}\" cx=\"${2:100}\" cy=\"${3:100}\" fill=\"${4:blue}\"/>'),
-            ('svg\tTag', 'svg> $1 </svg>'),
             ('textarea\tTag', 'textarea rows=\"${1:10}\" cols=\"${2:60}\" spellcheck=\"${3:true}\">\n\t$4\n</textarea>'),
             ('ul\tTag', 'ul>\n\t$1\n</ul>'),
-            ('li\tTag', 'li>$1</li>'),
-            ('h1\tTag', 'h1>$1</h1>'),
-            ('h2\tTag', 'h2>$1</h2>'),
-            ('h3\tTag', 'h3>$1</h3>'),
-            ('h4\tTag', 'h4>$1</h4>'),
-            ('h5\tTag', 'h5>$1</h5>'),
-            ('h6\tTag', 'h6>$1</h6>'),
-            ('span\tTag', 'span$1>$2</span>'),
-            ('title\tTag', 'title>$1</title>'),
         ])
 
         return default_list
