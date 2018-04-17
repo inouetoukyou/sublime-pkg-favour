@@ -11,8 +11,13 @@ def match(rex, str):
 
 def make_completion(tag):
     # make it look like
-    # ("table\tTag", "table>$1</table>"),
+    # ("table\tTag", "table$1>$2</table>$0"),
     return (tag + '\tTag', tag + '$1>$2</' + tag + '>$0')
+
+def make_completion2(tag):
+    # make it look like
+    # ("table\tTag", "table$1>\n\t$2\n</table>$0"),
+    return (tag + '\tTag', tag + '$1>\n\t$2\n</' + tag + '>$0')
 
 def get_tag_to_attributes():
     """
@@ -261,7 +266,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
         """
         default_list = []
         normal_tags = ([
-            'abbr', 'acronym', 'address', 'applet', 'article', 'aside',
+            'abbr', 'acronym', 'address', 'applet', 'article',
             'audio', 'b', 'basefont', 'bdi', 'bdo', 'big', 'blockquote',
             'body', 'button', 'center', 'canvas', 'caption', 'cdata',
             'cite', 'colgroup', 'code', 'content', 'data', 'datalist',
@@ -269,7 +274,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'em', 'embed', 'fieldset', 'figure', 'figcaption', 'font', 'footer',
             'form', 'frame', 'frameset', 'head', 'header','i', 'ins', 'isindex', 
             'kbd', 'keygen','label', 'legend', 'main', 'map', 'mark', 'meter',
-            'nav', 'noframes', 'noscript', 'object', 'ol', 'optgroup',
+            'noframes', 'noscript', 'object', 'ol', 'optgroup',
             'option', 'output', 'p', 'picture', 'pre', 'q', 'rp',
             'rt', 'rtc', 'ruby', 's', 'samp', 'section', 'select', 'shadow',
             'small', 'strong', 'sub', 'summary', 'sup',
@@ -280,20 +285,28 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'title', 'li', 'svg', 'menu', 
             'menuitem',
         ])
+            # custom
+        normal_tags2 = ([
+            'ul', 'nav', 'aside',
+        ])
 
         for tag in normal_tags:
             default_list.append(make_completion(tag))
             default_list.append(make_completion(tag.upper()))
 
+        for tag in normal_tags2:
+            default_list.append(make_completion2(tag))
+            default_list.append(make_completion2(tag.upper()))
+
         default_list += ([
-            ('a\tTag', 'a href=\"$1\">$0</a>'),
+            ('a\tTag', 'a href=\"$1\">$2</a>'),
             ('area\tTag', 'area shape=\"$1\" coords=\"$2\" href=\"$3\">'),
-            ('audio\tTag', 'audio src=\"$1\">$0</audio>'),
+            ('audio\tTag', 'audio src=\"$1\">$2</audio>'),
             ('base\tTag', 'base href=\"$1\">'),
             ('br\tTag', 'br/>'),
             ('col\tTag', 'col>'),
             ('hr\tTag', 'hr>'),
-            ('iframe\tTag', 'iframe src=\"$1\">$0</iframe>'),
+            ('iframe\tTag', 'iframe src=\"$1\">$2</iframe>'),
             ('input\tTag', 'input type=\"${1:text}\"$2 />$3<br/>'),
             ('img\tTag', 'img src=\"$1\">'),
             ('link\tTag', 'link rel=\"stylesheet\" type=\"text/css\" href=\"$1\">'),
@@ -310,7 +323,6 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             # custom
             ('circle\tTag', 'circle r=\"${1:80}\" cx=\"${2:100}\" cy=\"${3:100}\" fill=\"${4:blue}\"/>'),
             ('textarea\tTag', 'textarea rows=\"${1:10}\" cols=\"${2:60}\" spellcheck=\"${3:true}\">\n\t$4\n</textarea>'),
-            ('ul\tTag', 'ul>\n\t$1\n</ul>'),
         ])
 
         return default_list
