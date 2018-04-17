@@ -6,7 +6,6 @@ public:
 	~${1/(\w+).*/$1/}();
 	$4
 };
-
 ]]></content>
 	<tabTrigger>class</tabTrigger>
 	<scope>source.c++, source.objc++</scope>

@@ -3,7 +3,6 @@
 	<content><![CDATA[enum ${1:name} {
 	$2
 };
-
 ]]></content>
 	<tabTrigger>enum</tabTrigger>
 	<scope>source.c++, source.objc++</scope>

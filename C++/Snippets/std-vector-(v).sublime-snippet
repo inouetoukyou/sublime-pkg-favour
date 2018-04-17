@@ -1,7 +1,6 @@
 <snippet>
 	<description>std::vector</description>
 	<content><![CDATA[vector<${1:int}> ${3:v};
-
 ]]></content>
 	<tabTrigger>vector</tabTrigger>
 	<scope>source.c++, source.objc++</scope>
