@@ -143,7 +143,11 @@ def get_tag_to_attributes():
         'ul' : ['compact', 'type'],
         'var' : [],
         'video' : ['autoplay', 'autobuffer', 'buffered', 'controls', 'crossorigin', 'height', 'loop', 'muted', 'played', 'preload', 'poster', 'src', 'width'],
-        'wbr' : []
+        'wbr' : [],
+
+        # custom
+        'circle' : ['r', 'cx', 'cy', 'fill'],
+        'svg' : [],
     }
 
     # Assume that global attributes are common to all HTML elements
@@ -299,7 +303,11 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             ('style\tTag', 'style type=\"${1:text/css}\">$0</style>'),
             ('track\tTag', 'track kind=\"$1\" src=\"$2\">'),
             ('wbr\tTag', 'wbr>'),
-            ('video\tTag', 'video src=\"$1\">$0</video>')
+            ('video\tTag', 'video src=\"$1\">$0</video>'),
+
+            # custom
+            ('circle\tTag', 'circle r=\"${1:80}\" cx=\"${2:100}\" cy=\"${3:100}\" fill=\"${4:blue}\"/>'),
+            ('svg\tTag', 'svg> $1 </svg>')
         ])
 
         return default_list
