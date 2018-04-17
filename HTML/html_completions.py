@@ -287,7 +287,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
         ])
             # custom
         normal_tags2 = ([
-            'ul', 'nav', 'aside',
+            'ul', 'nav', 'aside', 'hgroup',
         ])
 
         for tag in normal_tags:
