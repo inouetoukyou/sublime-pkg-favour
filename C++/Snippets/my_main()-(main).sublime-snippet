@@ -10,7 +10,7 @@
 #include <map>
 #include <vector>
 using namespace std;
-int main(int argc, char ${TM_C_POINTER:*}argv[]){
+int main(int argc, char ${TM_C_POINTER:*}argv[]) {
 	${0:/* code */}
 	return 0;
 }]]></content>
