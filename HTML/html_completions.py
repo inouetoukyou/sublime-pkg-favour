@@ -267,8 +267,8 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'cite', 'colgroup', 'code', 'content', 'data', 'datalist',
             'dir', 'div', 'dd', 'del', 'details', 'dfn', 'dl', 'dt', 'element',
             'em', 'embed', 'fieldset', 'figure', 'figcaption', 'font', 'footer',
-            'form', 'frame', 'frameset', 'head', 'header','i', 'ins', 'isindex', 'kbd', 'keygen',
-            'label', 'legend', 'main', 'map', 'mark', 'meter',
+            'form', 'frame', 'frameset', 'head', 'header','i', 'ins', 'isindex', 
+            'kbd', 'keygen','label', 'legend', 'main', 'map', 'mark', 'meter',
             'nav', 'noframes', 'noscript', 'object', 'ol', 'optgroup',
             'option', 'output', 'p', 'picture', 'pre', 'q', 'rp',
             'rt', 'rtc', 'ruby', 's', 'samp', 'section', 'select', 'shadow',
@@ -277,7 +277,8 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'thead', 'time', 'tr', 'tt', 'u', 'var',
             'video',
             # custom
-            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'title', 'li', 'svg',
+            'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'span', 'title', 'li', 'svg', 'menu', 
+            'menuitem',
         ])
 
         for tag in normal_tags:
