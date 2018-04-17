@@ -272,9 +272,9 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             'nav', 'noframes', 'noscript', 'object', 'ol', 'optgroup',
             'option', 'output', 'p', 'picture', 'pre', 'q', 'rp',
             'rt', 'rtc', 'ruby', 's', 'samp', 'section', 'select', 'shadow',
-            'small', 'span', 'strong', 'sub', 'summary', 'sup',
+            'small', 'strong', 'sub', 'summary', 'sup',
             'table', 'tbody', 'td', 'template', 'tfoot', 'th',
-            'thead', 'time', 'title', 'tr', 'tt', 'u', 'var',
+            'thead', 'time', 'tr', 'tt', 'u', 'var',
             'video'
         ])
 
@@ -316,6 +316,8 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             ('h4\tTag', 'h4>$1</h4>'),
             ('h5\tTag', 'h5>$1</h5>'),
             ('h6\tTag', 'h6>$1</h6>'),
+            ('span\tTag', 'span$1>$2</span>'),
+            ('title\tTag', 'title>$1</title>'),
         ])
 
         return default_list
