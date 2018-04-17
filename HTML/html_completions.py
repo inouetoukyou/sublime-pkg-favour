@@ -292,7 +292,7 @@ class HtmlTagCompletions(sublime_plugin.EventListener):
             ('col\tTag', 'col>'),
             ('hr\tTag', 'hr>'),
             ('iframe\tTag', 'iframe src=\"$1\">$0</iframe>'),
-            ('input\tTag', 'input type=\"$1\" name=\"$2\">'),
+            ('input\tTag', 'input type=\"${1:text}\"$2>$3<br>\n'),
             ('img\tTag', 'img src=\"$1\">'),
             ('link\tTag', 'link rel=\"stylesheet\" type=\"text/css\" href=\"$1\">'),
             ('meta\tTag', 'meta ${1:charset=\"utf-8\"}>'),
