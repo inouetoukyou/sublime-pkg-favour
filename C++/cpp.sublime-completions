@@ -15,5 +15,6 @@
         { "trigger": "map", "contents": "map" },
         { "trigger": "vector", "contents": "vector" },
         { "trigger": "pair", "contents": "pair" },
+        { "trigger": "break", "contents": "break;"},
     ]
 }
