@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <string>
 #include <limits.h>
 int main(int argc, char ${TM_C_POINTER:*}argv[]) {
 	${0:/* code */}
