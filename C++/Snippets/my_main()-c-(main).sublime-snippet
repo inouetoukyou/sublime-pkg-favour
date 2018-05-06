@@ -1,10 +1,7 @@
 <snippet>
 	<description>my_main()</description>
 	<content><![CDATA[
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>$1
+#include <stdio.h>$1
 int main(int argc, char ${TM_C_POINTER:*}argv[]) {
 	$0
 	return 0;
