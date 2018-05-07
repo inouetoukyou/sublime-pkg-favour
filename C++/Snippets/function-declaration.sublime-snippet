@@ -1,8 +1,6 @@
 <snippet>
     <description>Function</description>
-    <content><![CDATA[${1:void} ${2:function}($3) {
-    ${4:/* code */}
-}]]></content>
-    <tabTrigger>function</tabTrigger>
+    <content><![CDATA[${1:void} ${2:function}($3);]]></content>
+    <tabTrigger>function ();</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.objc++</scope>
 </snippet>

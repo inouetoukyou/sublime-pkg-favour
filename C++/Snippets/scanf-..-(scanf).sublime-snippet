@@ -1,7 +1,7 @@
 <snippet>
-	<description>scanf …</description>
-	<content><![CDATA[scanf("${1:%d}", $2);
+    <description>scanf …</description>
+    <content><![CDATA[scanf("${1:%d}", $2);
 ]]></content>
-	<tabTrigger>scanf</tabTrigger>
-	<scope>source.c, source.objc, source.c++, source.objc++</scope>
+    <tabTrigger>scanf</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++</scope>
 </snippet>

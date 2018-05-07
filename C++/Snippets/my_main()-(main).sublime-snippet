@@ -1,12 +1,12 @@
 <snippet>
-	<description>my_main()</description>
-	<content><![CDATA[
+    <description>my_main()</description>
+    <content><![CDATA[
 #include <cstdio>
 using namespace std;$1
 int main(int argc, char ${TM_C_POINTER:*}argv[]) {
-	$0
-	return 0;
+    $0
+    return 0;
 }]]></content>
-	<tabTrigger>main</tabTrigger>
-	<scope>(source.c++ | source.objc++) - entity.name.function</scope>
+    <tabTrigger>main</tabTrigger>
+    <scope>(source.c++ | source.objc++) - entity.name.function</scope>
 </snippet>
