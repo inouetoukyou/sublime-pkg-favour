@@ -3,6 +3,11 @@
     <content><![CDATA[
 #include <iostream>
 #include <algorithm>
+#include <string>
+#include <vector>
+#include <queue>
+#include <map>
+#include <stack>
 using namespace std;
 using ll = long long;
 using ull = unsigned long long;$1
