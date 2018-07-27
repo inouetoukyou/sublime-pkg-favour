@@ -13,7 +13,7 @@ using ll = long long;
 using ull = unsigned long long;$1
 int main(int argc, char ${TM_C_POINTER:*}argv[]) {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(NULL);//incompatible with `while (cin >> ...)'
     $0
     return 0;
 }]]></content>
