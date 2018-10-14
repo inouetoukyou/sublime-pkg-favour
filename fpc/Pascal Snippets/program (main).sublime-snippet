@@ -2,8 +2,7 @@
     <content><![CDATA[
 program ${1:ProgramName};
 
-procedure Main();
-begin
+procedure Main(); begin
 	${2}
 end;
 

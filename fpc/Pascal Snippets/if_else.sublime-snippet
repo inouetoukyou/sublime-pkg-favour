@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <snippet>
     <content><![CDATA[
-if ${1:expression} then 
-begin
+if ${1:expression} then begin
 	$2
-end else 
-begin
+end else begin
 	$3
 end;
 ]]></content>
