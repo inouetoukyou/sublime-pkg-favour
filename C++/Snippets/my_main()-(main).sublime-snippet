@@ -12,7 +12,7 @@ using namespace std;
 using ll = long long;
 using ull = unsigned long long;$1
 int main(int argc, char ${TM_C_POINTER:*}argv[]) {
-    ios_base::sync_with_stdio(false);
+    ios_base::sync_with_stdio(false);//bugs with `printf'
     cin.tie(NULL);//incompatible with `while (cin >> ...)'
     $0
     return 0;
