@@ -6,5 +6,8 @@
     "osx": {
         "path": "/usr/local/bin:/usr/bin:/bin:${path}",
         "cmd": ["/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", "${file}"]
-    }
+    },
+    "windows" : {
+        "shell_cmd": "\"C:/Program Files (x86)/Google/Chrome/Application/chrome\" \"${file}\"",
+    },
 }
